@@ -1,0 +1,18 @@
+<div style="margin-top:20px;" class="card">
+    <div class="card-action content center-align green darken-4">
+        <h3 style="margin: 20px; color: white;">{{story.title}}
+            {{#if story.user}}
+                <a href="/stories/edit/{{story._id}}" class="btn-floating 
+                halfway-fab "><i class="fas fa-edit fa-small"></i></a>
+                {{else}}
+
+            {{/if}}
+        </h3>
+    </div>
+    <div class="card-action content aling-left"> 
+        <p> {{stripTags story.body}}</p>
+    </div>
+    <div class="card-action content right-align">
+        <h5  style="margin: 20px;">By: {{user.displayName}}</h5>
+    </div>     
+</div>

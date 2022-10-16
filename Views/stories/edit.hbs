@@ -1,0 +1,42 @@
+<tr>
+    <h4>
+        <td>Edit Story</td>
+        <td>
+            <a href="/stories/edit/delete/{{story._id}}" 
+            class="btn-small red accent-4 right">
+            <i class="fas fa-trash center"></i>
+            </a>
+        </td>
+    </h4>
+</tr>
+<div class="roll">
+    <form action="/stories/edit/{{story._id}}" method="POST" class="col s12">
+    <div class="row">
+        <div class="input-field">
+            <input type="text" id="title" name="title" value="{{story.title}}">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="input-field">
+            <select name="status" id="status">
+                <option value="public" selected>Public</option>
+                <option value="private">Private</option>
+            </select>
+            <label for="status">Status</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="input-filed">
+            <h5>Edit your Story</h5>
+            <textarea name="body" id="body">{{story.body}}</textarea>
+        </div>
+    </div>
+
+    <div class="row">
+        <input type="submit" value= "Save Edit" class="btn green">
+        <a href="/dashboard" class="btn grey">Cancel</a>
+    </div>
+    </form>
+</div>
